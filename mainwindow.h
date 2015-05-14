@@ -19,12 +19,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void prepareTable();
 
 private:
     Ui::MainWindow *ui;
-    QGraphicsScene* scene;
-    QGraphicsEllipseItem *ellipse;
-    QGraphicsRectItem *rect;
 };
 
 #endif // MAINWINDOW_H

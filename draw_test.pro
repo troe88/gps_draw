@@ -21,5 +21,4 @@ HEADERS  += mainwindow.h \
     mygraphicsview.h \
     myscene.h
 
-FORMS    += mainwindow.ui \
-    test.ui
+FORMS    += mainwindow.ui

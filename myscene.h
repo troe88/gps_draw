@@ -80,7 +80,7 @@ public:
 
     int getYfromLat(const double &lat){
         int y = 0;
-        double Ky = qAbs(_max_lat - lat) / qAbs(_min_lat - _max_lat);
+        double Ky = 1 - qAbs(_max_lat - lat) / qAbs(_min_lat - _max_lat);
         qDebug() << "Ky: " << Ky;
         y = _pix_height * Ky;
         qDebug() << "y: " << y;
@@ -92,11 +92,14 @@ public:
 class MyScene : public QGraphicsScene
 {
     Q_OBJECT
-private:
+public:
     MapRect *map;
+    QVector<QColor> color_data;
 
 public:
     MyScene(QWidget *parent);
+    void addWay();
+
     ~MyScene();
 };
 
