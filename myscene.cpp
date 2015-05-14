@@ -1,6 +1,6 @@
 #include "myscene.h"
 #include <math.h>
-#include <QtMath>
+//#include <QtMath>
 #include <QVector>
 #include <QPainter>
 
