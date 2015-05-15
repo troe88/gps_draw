@@ -30,7 +30,23 @@ MainWindow::MainWindow(QWidget *parent) :
     QVector<QColor> d = ((MyScene*)ui->graphicsView->scene())->color_data;
 
     foreach (QColor temp, d) {
-        ui->textBrowser->insertHtml(coloredText("SOME_NETW", temp));
+        QString text;
+        int rand = qrand() % 5;
+        switch (rand) {
+        case 0:
+        case 1:
+            text = "FiFi";
+            break;
+        case 2:
+        case 3:
+        default:
+            text = "LTE";
+            break;
+        }
+
+        text += "_" + QString::number(qrand() % 15);
+
+        ui->textBrowser->insertHtml(coloredText(text, temp));
     }
 
 //    ui->textBrowser->insertHtml(coloredText("WiFi_1", ((MyScene*)ui->graphicsView->scene())->color_data.at(0)));

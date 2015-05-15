@@ -12,8 +12,6 @@
 #include <unistd.h>
 #include <QGraphicsEllipseItem>
 
-#define MAP_IMAGE_PATH "/tmp/test4.png"
-
 class MapRect {
 public:
     double _min_lon;
@@ -31,7 +29,7 @@ public:
         _min_lat = c_lat + (rate / 2);
         _max_lon = c_lon + rate;
         _max_lat = c_lat - (rate / 2);
-        _image_path = "/tmp/background2.png";
+        _image_path = "background2.png";
 
         QFile file("/home/dmitry/Downloads/Maperitive/scr2.txt");
 
