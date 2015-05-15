@@ -22,3 +22,5 @@ HEADERS  += mainwindow.h \
     myscene.h
 
 FORMS    += mainwindow.ui
+
+LIBS += -lgps
